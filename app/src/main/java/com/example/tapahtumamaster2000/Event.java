@@ -13,14 +13,22 @@ public class Event {
     double price;
     URL url;
 
-
-
-    public Date getDuration(Event e){
-
-        //return
+    public Date getDuration(Event e) {
+        string duration = openHoursStart;
+        duration = duration.concat(openHoursEnd);
+        return duration;
     }
 
-    public double getPrice(){
+    public double getPrice(Event e) {
         return price;
     }
+
+    public string getName(Event e) {
+        return name;
+    }
+
+    public String getDescription(Event e) {
+        return description;
+    }
+
 }

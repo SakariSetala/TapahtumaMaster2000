@@ -18,7 +18,7 @@ public class LogInPage {
                 un = Scan.nextLine();
                 System.out.println("Please enter your password");
                 pw = Scan.nextLine();
-                u.logIn(un, pw);
+                u.LogInPage(un, pw);
             }
         }
         Scan.close();
