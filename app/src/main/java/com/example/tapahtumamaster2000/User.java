@@ -57,12 +57,16 @@ public class User {
 
     public void changePassword(User u, String pass) {
         // encoding with e.g. hash here
-        u.password = pass;
+        if (testPassword(pass) == true) {
+            u.password = pass;
+        } else
+            System.out.println("Weak password");
     }
 
     public void saveEvent(User u, Event ev) {
+        // Saves chosed event
         if (u.savedEvents.size() == 0) {
-
+            System.out.println("No such event");
         } else {
             u.savedEvents.add(ev);
             System.out.println("Event added");
